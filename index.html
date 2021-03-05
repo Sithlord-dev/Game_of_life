@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Game of Life</title>
+</head>
+
+<body>
+    <script>
+        function getGIF() {
+            document.getElementById("cinema").innerHTML = "<p>Loading...</p>";
+            // NB! Change this if you want to deploy this site somewhere else
+            fetch("generate").then(val => val.json()).then((j) => {
+                let i = document.createElement("img");
+                i.setAttribute("src", j.url);
+                document.getElementById("cinema").innerHTML = "";
+                document.getElementById("cinema").appendChild(i);
+            })
+        }
+    </script>
+    <button onclick="getGIF()">Generate</button>
+    <div id="cinema"></div>
+</body>
+
+</html>
