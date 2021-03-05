@@ -1,3 +1,6 @@
+# Don't track generated GIFs
+temp/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
