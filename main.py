@@ -92,7 +92,7 @@ class GIFGenerator:
     
     def generateGIF(self, prob_life=0.5, size=(80,80)):
         filename = str(uuid.uuid1())
-        anim = self.let_there_be_life(prob_life=0.5, size=(80, 80))
+        anim = self.let_there_be_life(prob_life, size)
         anim.save(f'temp/{filename}.gif', writer='pillow')
         return filename
 
