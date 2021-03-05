@@ -19,10 +19,10 @@ if not os.path.exists('temp'):
 
 # Generate GIFs and get the name of the file back
 @app.get("/generate")
-async def generate_gif():
+async def generate_gif(probability:float=0.5, h_size:int=10, w_size:int=10):
     g = GIFGenerator()
-    filename = g.generateGIF(0.5, (2,2))
-    return {"filename": filename+".gif", "url": f"http://{settings.SERVER_HOST}:{settings.SERVER_PORT}/{filename}.gif"}
+    filename = g.generateGIF(probability, (h_size,w_size))
+    return {"filename": filename+".gif", "url": f"http://{settings.SERVER_HOST}:{settings.SERVER_PORT}/temp/{filename}.gif"}
 
 # Return app info if the root is called
 @app.get("/")
