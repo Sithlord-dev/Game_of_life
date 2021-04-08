@@ -6,7 +6,7 @@ It is a game where evolution is determined by its initial state, requiring no fu
 
 As a huge fan of Conway's work, his beautiful mind and his charimatic and genius approach to mathematics in general, I chose to implement this game for a final project of my Python programming course during my studies.
 
-![image](img/Game of life.gif)
+![demo](https://github.com/Sithlord-dev/Game_of_life/blob/main/img/Game%20of%20life.gif)
 
 For more details, see the Notebook version: 
 
